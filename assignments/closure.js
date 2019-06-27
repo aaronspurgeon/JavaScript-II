@@ -10,7 +10,7 @@ const aaron = name('Aaron');
 aaron('JavaScript');
 
 const john = name('John');
-john('Python');
+john('Python and C#');
 
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
