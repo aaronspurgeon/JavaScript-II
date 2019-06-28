@@ -64,24 +64,46 @@ console.log(fullName);
 
 // ==== Challenge 2: Use .map() ====
 // The event director needs to have all the runner's first names converted to uppercase because the director BECAME DRUNK WITH POWER. Convert each first name into all caps and log the result
-let allCaps = [];
+let allCaps = runners.map((item) => {
+   return item.first_name.toUpperCase();
+});
+
 console.log(allCaps); 
 
 // ==== Challenge 3: Use .filter() ====
 // The large shirts won't be available for the event due to an ordering issue.  Get a list of runners with large sized shirts so they can choose a different size. Return an array named largeShirts that contains information about the runners that have a shirt size of L and log the result
-let largeShirts = [];
+let largeShirts = runners.filter(item => item.shirt_size === 'L');
 console.log(largeShirts);
 
 // ==== Challenge 4: Use .reduce() ====
 // The donations need to be tallied up and reported for tax purposes. Add up all the donations into a ticketPriceTotal array and log the result
-let ticketPriceTotal = [];
+let ticketPriceTotal = runners.reduce((total, runner) => {
+    return total += runner.donation;
+}, 0);
 console.log(ticketPriceTotal);
 
 // ==== Challenge 5: Be Creative ====
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
+// big baller donation, using .filter to get only donations that are above 200 dollars and putting the runners in their own VIP group (array) to show they are big donators to the world!
+const bigBaller = runners.filter(item => item.donation >= 200);
+console.log(bigBaller);
 
 // Problem 2
-
+// taking the total number of big baller donations this year and adding them up for a very important reason according to the (drunk) director
+const totalBigBaller = bigBaller.reduce((total, runner) => {
+    return total += runner.donation;
+}, 0);
+console.log(totalBigBaller);
 // Problem 3
+// using a forEach method to find out the number of Yale alumni in the marathon
+const yaleRunners = [];
+
+runners.forEach((item) => {
+    if (item.email.includes('yale')) {
+        yaleRunners.push(`${item.first_name} is a Yale graduate, we think?`);
+    }
+});
+console.log(yaleRunners);
+console.log(yaleRunners.length);
