@@ -6,7 +6,6 @@ function name(a) {
   }
 }
 const aaron = name('Aaron');
-
 aaron('JavaScript');
 
 const john = name('John');
