@@ -69,10 +69,16 @@ contains("yo-yo", items, bool => {
   console.log(bool);
 });
 
-/* STRETCH PROBLEM */
+// /* STRETCH PROBLEM */
 
-function removeDuplicates(array, cb) {
-  // removeDuplicates removes all duplicate values from the given array.
-  // Pass the duplicate free array to the callback function.
-  // Do not mutate the original array.
-}
+// const arrayStretch = ['stuff', 'cats', 'dogs', 'banana', 'stuff']
+// function getDuplicates(item, index, self) {
+//   return self.indexOf(item) === index;
+// }
+
+// function removeDuplicates(array, cb) {
+//   // removeDuplicates removes all duplicate values from the given array.
+//   // Pass the duplicate free array to the callback function.
+//   // Do not mutate the original array.
+// };
+// console.log(removeDuplicates(arrayStretch, getDuplicates));
